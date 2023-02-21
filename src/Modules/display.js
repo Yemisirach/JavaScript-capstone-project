@@ -4,7 +4,6 @@ const displayScores = (arr) => {
   const displayScores = arr.map(
 
     (item) => `
-
         <section class="features">
     <div class="feature">
         <div class="feature-img">
@@ -14,7 +13,6 @@ const displayScores = (arr) => {
             <h3>${item.strTags}</h3>
             <p class="hardware">${item.strCategory}</p>
             <h4>${item.strMeasure1} </h4>
-           
             <button  type="button" > Comment</button>
             <br>
             <br>
