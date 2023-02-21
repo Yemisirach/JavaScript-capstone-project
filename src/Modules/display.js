@@ -13,13 +13,13 @@ const displayScores = (arr) => {
         <div class="info">
             <h3>${item.strTags}</h3>
             <p class="hardware">${item.strCategory}</p>
-            <div class="line-feature"></div>
             <h4>${item.strMeasure1} </h4>
-            <div class="btn">
-            <button id="refreshScores"  type="button" > Comment</button>
+           
+            <button  type="button" > Comment</button>
             <br>
-            <button id="refreshScores"  type="button" > reservation</button>
-            </div>
+            <br>
+            <button type="button" > reservation</button>
+            
         </div>
     </div>
 </section>`
