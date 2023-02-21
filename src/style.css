@@ -5,3 +5,13 @@ body {
 .imagemeals {
   width: 20%;
 }
+
+.tableBody {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+}
