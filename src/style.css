@@ -33,6 +33,20 @@ body {
   border-top-left-radius: 70px;
 }
 
+.line-feature {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.line-feature p,
+.line-feature h3 {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}
+
 .popu-button {
   display: flex;
   flex-direction: row;

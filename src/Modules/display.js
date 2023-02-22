@@ -9,15 +9,18 @@ const displayScores = (arr) => {
             <img class="imagemeals" src="${item.strMealThumb}" alt="">
         </div>
         <div class="info">
-            <h3>${item.strTags}</h3>
+            <div class="line-feature">
+             <h3>${item.strTags}</h3>
             <p class="hardware">${item.strCategory}</p>
-            <div class="line-feature"></div>
-           <div class="popu-button">
-           <button id="refreshScores"  type="button" >Comment</button>
-           <br>
-           <button id="refreshScores"  type="button" >Reservation</button>
-           </div>
-            </div>   
+            <h3>${item.strMeasure1} </h3>
+            </div>
+           
+            <div class="popu-button">
+            <button id="refreshScores"  type="button" > Comment</button>
+            <br>
+            <button id="refreshScores"  type="button" > reservation</button>
+            </div>
+        </div>
     </div>
 </section>`,
   );
