@@ -66,3 +66,29 @@ button,
   cursor: pointer;
   margin: 3%;
 }
+
+/* header and footer start */
+ul {
+  display: flex;
+  list-style-type: none;
+  gap: 6rem;
+  font-size: 1.5rem;
+  justify-content: center;
+  text-transform: capitalize;
+  margin-top: 50px;
+}
+
+ul h1 {
+  border: 2px solid red;
+  font-size: 1.5rem;
+  color: red;
+  padding: 0.5rem;
+  border-radius: 40%;
+  margin-top: -1rem;
+}
+
+hr {
+  border-top: 4px solid red;
+}
+
+/* header and footer end */
