@@ -2,9 +2,7 @@ const scoreDisplay = document.querySelector('.tableBody');
 const displayScores = (arr) => {
   scoreDisplay.innerHTML = '';
   const displayScores = arr.map(
-
     (item) => `
-
         <section class="features">
     <div class="feature">
         <div class="feature-img">
@@ -14,16 +12,14 @@ const displayScores = (arr) => {
             <h3>${item.strTags}</h3>
             <p class="hardware">${item.strCategory}</p>
             <div class="line-feature"></div>
-            <h4>${item.strMeasure1} </h4>
-            <div class="btn">
-            <button id="refreshScores"  type="button" > Comment</button>
-            <br>
-            <button id="refreshScores"  type="button" > reservation</button>
-            </div>
-        </div>
+           <div class="popu-button">
+           <button id="refreshScores"  type="button" >Comment</button>
+           <br>
+           <button id="refreshScores"  type="button" >Reservation</button>
+           </div>
+            </div>   
     </div>
-</section>`
-    ,
+</section>`,
   );
   scoreDisplay.innerHTML = displayScores.join(' ');
 };
