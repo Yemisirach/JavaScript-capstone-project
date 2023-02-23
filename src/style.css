@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Architects Daughter", cursive;
   margin: 0;
   padding: 0;
 }
@@ -14,6 +16,7 @@ body {
   margin: 6%;
   height: auto;
   border: 3px solid rgb(255, 189, 47);
+  transition: all 0.4s;
 
   /* border-radius: ; */
   border-radius: 70px;
@@ -25,12 +28,17 @@ body {
   margin: auto;
 }
 
+/* .feature-img {
+  background-color: rgb(72, 222, 64);
+  border-radius: 70px;
+  border-top-right-radius: 70px;
+} */
 .imagemeals {
+  transition: transform 0.5s ease;
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  border-top-left-radius: 70px;
 }
 
 .line-feature {
@@ -42,29 +50,42 @@ body {
 
 .line-feature p,
 .line-feature h3 {
-  font-size: 25px;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
+}
+
+.line-feature h3 {
+  font-weight: 900;
+  font-size: 2rem;
+  padding-top: 1rem;
 }
 
 .popu-button {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  margin: 10%;
+  margin: 4%;
 }
 
 button,
-.btn {
+.btn,
+.commentSection button {
   border: 2px solid rgb(36, 33, 33);
   border-radius: 10px;
   background: white;
   box-shadow: 2px 2px;
   font-size: 16px;
   padding: 5px 12px;
-  height: 6%;
   cursor: pointer;
-  margin: 3%;
+  margin: 8%;
+}
+
+.commentSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* header and footer start */
@@ -79,16 +100,142 @@ ul {
 }
 
 ul h1 {
-  border: 2px solid red;
+  border: 2px solid rgb(255, 179, 0);
   font-size: 1.5rem;
-  color: red;
+  color: rgb(255, 179, 0);
   padding: 0.5rem;
   border-radius: 40%;
   margin-top: -1rem;
 }
 
 hr {
-  border-top: 4px solid red;
+  border-top: 1px solid rgb(255, 179, 0);
 }
 
 /* header and footer end */
+.heart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.heart b {
+  font-size: 1rem;
+}
+
+#reservation {
+  display: flex;
+  justify-content: center;
+}
+
+/* popup windos */
+.imagemealspop {
+  width: 70%;
+  height: auto;
+}
+
+.close-bt {
+  display: flex;
+  justify-content: flex-end;
+  color: brown;
+  font-size: 20px;
+}
+
+.popup-windo {
+  width: 80%;
+  margin: auto;
+}
+
+.popup-img {
+  width: 80%;
+  margin: auto;
+}
+
+.meal-name {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.meal-detail {
+  width: 100%;
+}
+
+.meal-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.list {
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.score-container {
+  width: 50%;
+  height: 100px;
+}
+
+input {
+  margin: 0.2rem;
+  padding: 0;
+  border-radius: 10px;
+  width: 1rem;
+}
+
+.comment-form {
+  width: 100%;
+}
+
+.comment-header {
+  width: 50%;
+  margin: auto;
+  font-size: 12px;
+}
+
+form {
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+textarea {
+  border-radius: 7px;
+  border-color: rgb(178, 178, 174);
+  height: 10rem;
+  padding: 0.5rem;
+}
+
+.form-control {
+  height: 2rem;
+  padding: 0.7rem;
+  border-radius: 8px;
+  width: 50%;
+  margin: 1.5rem;
+  margin-left: 0;
+}
+
+.add-Btn {
+  margin-left: 22%;
+  height: 2.2rem;
+  border-radius: 8px;
+  background-color: rgb(155, 175, 230);
+  color: rgb(47, 46, 46);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
+
+/* .tableBody {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+} */
+
+.btn {
+  display: flex;
+  flex-direction: column;
+}
