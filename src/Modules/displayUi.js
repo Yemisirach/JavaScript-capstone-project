@@ -19,8 +19,7 @@ const foodsUI = async () => {
             (item) => item.item_id === item.idCategory
           );
 
-          // ckeck if the objct is empty
-          let pickLikes = "";
+          let pickLikes = "1";
           if (arrLikes.length !== 0) {
             pickLikes = arrLikes[0].likes;
             console.log(pickLikes);
