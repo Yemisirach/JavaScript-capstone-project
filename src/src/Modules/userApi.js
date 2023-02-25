@@ -1,5 +1,5 @@
 /* eslint-disable */
-import foodsUI from "./displayUi";
+import foodsUI from "./displayUi.js";
 
 const url =
   "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/";
@@ -15,6 +15,7 @@ const addLike = async (id) => {
   const body = JSON.stringify({ item_id: id });
   const headers = { "Content-type": "application/json; charset=UTF-8" };
   /* eslint-disable */
+
   const result = await fetch(`${url}${key}/likes`, {
     method: "POST",
     body,
@@ -22,5 +23,4 @@ const addLike = async (id) => {
   });
   foodsUI();
 };
-
 export { getLikes, addLike };
