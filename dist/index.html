@@ -12,40 +12,60 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <script
+      src="https://kit.fontawesome.com/a11f8b435e.js"
+      crossorigin="anonymous"
+    ></script>
   <script defer src="main.js"></script></head>
+
+  <script src="index.js"></script>
+
   <body>
+    <div class="popu"></div>
     <header>
       <ul>
-        <h1>Abissina's meal </h1>
-        <li>show</li>
-        <li>likes</li>
-        <li>comments</li>
+        <h1><a href="#">Abissina's meal</a></h1>
+        <li><h2><a href="#">show</a></h2></li>
+        <li><h2><a href="#">like</a></h2></li>
+        <li><h2><a href="#">latest Meal</a></h2></li>
+        <a href="" class="meals" id="ourFood"></a>
       </ul>
       <hr />
     </header>
-    
-    <div class="container-fluid">
-      <h1 class="p-3"></h1>
-      
-        <div class="outputContainer w-100">
-          <div class="resent"  >
-                      
-          </div>
-          <div class="tableBody">
-
-          </div>
-          
+    <main>
+      <section>
+        <div>
+          <div class="meal" id="food-items"></div>
         </div>
-        <div class="inputContainer ">
-          <!-- <h2>Add your scores</h2> -->
-        
-        
-      </div>
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn modal-close-btn"
+            id="modal-close-btn"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+
+          <!-- Modal content -->
+          <div class="modal-details-content"></div>
+        </div>
+      </section>
+    </main>
+       
+      <div class="tableBody"></div>
+      <div class="inputContainer"></div>
+      <div class="popup"></div>
+      <div class="reservation-popup"></div>
     </div>
-    <hr />
     <footer>
-      <p>Created by Kingno3l, Yemisirach, and Damina</p>
+      <ul class="all-contibutors">
+        Created by :
+        <a href="https://github.com/damenam" class="creator"
+          >Mihretab</a
+        >
+        <a href="https://github.com/Kingno3l" class="creator">Kingno3l</a>
+        <a href="https://github.com/Yemisirach" class="creator">Yemisirach</a>
+      </ul>
     </footer>
-    <script src="index.js"></script>
   </body>
 </html>
