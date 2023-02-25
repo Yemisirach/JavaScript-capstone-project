@@ -6,34 +6,47 @@ const url =
   "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/";
 const key = "ZbL3vMDmBGqIrLmuwzny";
 
-const mealsFunction = (item) => {
-  const { idCategory, strCategory, strCategoryThumb, strCategoryDescription } =
-    item[0];
+const mealsFunction = (meal) => {
+  const {
+    strMeal,
+    strMealThumb,
+    strCategory,
+    strArea,
+    strIngredient4,
+    strMeasure1,
+    idMeal,
+  } = meal[0];
+
   const html = `
         <div class="modal-meal-img">
-              <img src="${strCategoryThumb}" alt="" />
+              <img src="${strMealThumb}" alt="" />
             </div>
+            <h2 class="modal-title">${strMeal}</h2>
             <div class="item-details">
               <div>
                 <p>${strCategory}</p>
-                <p>${strCategoryDescription}</p>
+                <p>${strArea}</p>
+              </div>
+              <div>
+                <p>${strIngredient4}</p>
+                <p>${strMeasure1}</p>
               </div>
             </div>
             <h2 id="commentTitle">Comments</h2>
             <div id="commentsDisplay"></div>
             <h2 id="plusComment">Add a comment</h2>
             <div id="form">
-            <input type="text" id="username" class="form-control" placeholder="Your name" />
-            <textarea type="text" id="comment" placeholder="Your Insights" ></textarea>
+            <input type="text" id="username" placeholder="Your name" />
+            <input type="text" id="comment" placeholder="Your Insights" />
             <button type="submit" id="submit-comment">Submit</button>
             </div>
-             </section>
     `;
   modalDetailsContent.innerHTML = html;
   modalDetailsContent.parentElement.classList.add("displayModal");
   const submitBtn = document.getElementById("submit-comment");
+
   submitBtn.addEventListener("click", () => {
-    const item_id = idCategory;
+    const item_id = idMeal;
     const usernameInput = document.getElementById("username");
     const commentInput = document.getElementById("comment");
     const username = usernameInput.value;
@@ -47,12 +60,14 @@ const mealsFunction = (item) => {
         },
         body: data,
       });
+
       return response;
     }
 
     postData(`${url}${key}/comments`, dataToSend)
       .then((json) => {
         json.json();
+        // Handle success
       })
       .catch((err) => {
         err.err();
@@ -60,7 +75,7 @@ const mealsFunction = (item) => {
     usernameInput.value = "";
     commentInput.value = "";
     setTimeout(() => {
-      mealsFunction(item);
+      mealsFunction(meal);
     }, 1500);
   });
 
@@ -80,13 +95,13 @@ const mealsFunction = (item) => {
   const commentsDisplay = document.getElementById("commentsDisplay");
 
   const usersComments = () => {
-    getData(`${url}${key}/comments?item_id=${idCategory}`)
+    getData(`${url}${key}/comments?item_id=${idMeal}`)
       .then(async (res) => {
         const array = await res.json();
         return array;
       })
       .then((array) => {
-        const displays = array
+        const gege = array
           .map(
             (items) => `
     <div class="comentInfo">
@@ -100,7 +115,7 @@ const mealsFunction = (item) => {
       </div>`
           )
           .join(" ");
-        commentsDisplay.innerHTML = displays;
+        commentsDisplay.innerHTML = gege;
       });
   };
   usersComments();

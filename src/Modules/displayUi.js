@@ -5,49 +5,42 @@ import { getLikes } from "./userApi";
 import mealsCounter from "./mealCounte.js";
 
 const foodItemsDiv = document.getElementById("food-items");
+
 // event listeners
 foodItemsDiv.addEventListener("click", getMealInfo);
 
 const foodsUI = async () => {
-  fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
+  fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=g")
     .then((res) => res.json())
     .then((data) => {
       getLikes().then((datalikes) => {
         let html = "";
-        data.categories.forEach((item) => {
+        data.meals.forEach((meal) => {
           const arrLikes = datalikes.filter(
-            (item) => item.item_id === item.idCategory
+            (item) => item.item_id === meal.idMeal
           );
 
-          let pickLikes = "1";
+          // ckeck if the objct is empty
+          let pickLikes = "";
           if (arrLikes.length !== 0) {
             pickLikes = arrLikes[0].likes;
-            console.log(pickLikes);
           }
 
           html += `
-        
-          <section class="features">
-      <div class='meal-item' data-id = '${item.idCategory}'> 
+      <div class='meal-item' data-id = '${meal.idMeal}'> 
         <div class = 'meal-img'>     
-          <img src='${item.strCategoryThumb}'>
+          <img src='${meal.strMealThumb}'>
         </div>
         <div class = 'involvement'> 
-        <p><p>
-      
+        <p>Your love for this meal is...<p>
+        <a>${pickLikes}  <i class='fa-regular fa-heart' id='like-${meal.idMeal}'></i>  Like</a>
         </div>
-        <p>${item.strCategory}</p>
-        <div class = 'meal-name'> 
-          <p> ${item.strCategoryDescription.substr(0, 45)}...</p>
-          
+        <div class = 'meal-name'>
+          <p>${meal.strMeal}</p>
+          <p>Category: ${meal.strCategory}</p>
+          <button class = 'comment-btn'>Comment</button>
         </div>
-        <a>${pickLikes}  <i class='fa-regular fa-heart' id='like-${
-            item.idCategory
-          }'></i>  Like</a>
       </div>
-        <button class ='comment-btn'>Comment</button>
-
-      </section>
       `;
         });
         foodItemsDiv.innerHTML = html;
@@ -59,6 +52,6 @@ setTimeout(() => {
   const total = mealsCounter();
   const counter = document.getElementById("ourFood");
   counter.innerHTML = `Meals ${total}`;
-}, 1500);
+}, 2000);
 
 export default foodsUI;
