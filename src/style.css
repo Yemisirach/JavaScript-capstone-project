@@ -183,6 +183,11 @@ hr {
   margin: 30px;
 }
 
+.meals {
+  color: rgb(228, 164, 45);
+  text-decoration: none;
+}
+
 .popup {
   background-image: url(../Image/new.jpg);
   background-repeat: no-repeat;

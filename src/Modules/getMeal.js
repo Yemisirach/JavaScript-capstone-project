@@ -28,6 +28,4 @@ function getMealInfo(e) {
   }
 }
 
-// create a modal
-
 export default getMealInfo;

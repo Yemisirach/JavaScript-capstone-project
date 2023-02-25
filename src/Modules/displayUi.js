@@ -19,7 +19,6 @@ const foodsUI = async () => {
             (item) => item.item_id === item.idcategories
           );
 
-          // ckeck if the objct is empty
           let pickLikes = "";
           if (arrLikes.length !== 0) {
             pickLikes = arrLikes[0].likes;
@@ -41,11 +40,12 @@ const foodsUI = async () => {
           <p> ${item.strCategoryDescription.substr(0, 45)}...</p>
           
         </div>
-        <a>${pickLikes}  <i class='fa-regular fa-heart' id='like-${
+        <code><a>${pickLikes}<i class='fa-regular fa-heart' id='like-${
             item.idCategory
-          }'></i>  Like</a>
+          }'>
+        </i>  Like</a></code>
       </div>
-        <button class = 'comment-btn'>Comment</button>
+        <button class ='comment-btn'>Comment</button>
 
       </section>
       `;
