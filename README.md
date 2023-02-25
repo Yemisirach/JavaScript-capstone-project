@@ -157,6 +157,6 @@ I would like to thank Microverse
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/Yemisirach/JavaScript-capstone-project/blob/add-license-1/License) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
