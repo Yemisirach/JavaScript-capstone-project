@@ -1,30 +1,12 @@
 import './style.css';
-import display from './Modules/display.js';
-import renderPopup from './Modules/popup.js';
-import getMeal from './Modules/getMeal.js';
-import renderPopups from './Modules/reservationpop.js';
+import foodsUI from './Modules/displayUi.js';
 
-const apiId = 'https://www.themealdb.com/api/json/v1/1/categories.php';
+foodsUI();
 
-document.querySelector('.tableBody').innerHTML = '';
-
-getMeal(apiId).then((data) => {
-  display(data.categories);
-
-  const commentBtn = document.querySelectorAll('.commentBtn');
-  commentBtn.forEach((comment) => {
-    comment.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.querySelector('.tableBody').innerHTML = '';
-      getMeal(apiId).then((data) => renderPopup(data.categories, e.target.id));
-    });
-  });
-  const reservationBtn = document.querySelectorAll('.reservation');
-  reservationBtn.forEach((comment) => {
-    comment.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.querySelector('.tableBody').innerHTML = '';
-      getMeal(apiId).then((data) => renderPopups(data.categories, e.target.id));
-    });
-  });
+const modal = document.querySelector('.meal');
+const modalDetailsContent = document.querySelector('.modal-details-content');
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modalDetailsContent.parentElement.classList.remove('displayModal');
+  }
 });

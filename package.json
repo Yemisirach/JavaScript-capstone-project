@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --open",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev": "webpack --mode developmen"
+    "start": "webpack serve --open",
+    "test": "jest ",
+    "dev": "webpack --mode development"
   },
   "repository": {
     "type": "git",
