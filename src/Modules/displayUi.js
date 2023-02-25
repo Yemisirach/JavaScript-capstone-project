@@ -16,13 +16,15 @@ const foodsUI = async () => {
         let html = "";
         data.categories.forEach((item) => {
           const arrLikes = datalikes.filter(
-            (item) => item.item_id === item.idcategories
+            (item) => item.item_id === item.idCategory
           );
 
           // ckeck if the objct is empty
-          let pickLikes = "";
+          let newcount=2
+          let pickLikes = newcount++;
           if (arrLikes.length !== 0) {
             pickLikes = arrLikes[0].likes;
+            console.log(pickLikes)
           }
 
           html += `
@@ -41,9 +43,7 @@ const foodsUI = async () => {
           <p> ${item.strCategoryDescription.substr(0, 45)}...</p>
           
         </div>
-        <a>${pickLikes}  <i class='fa-regular fa-heart' id='like-${
-            item.idCategory
-          }'></i>  Like</a>
+        <a>${pickLikes}  <i class='fa-regular fa-heart' id='like-${item.idCategory}'></i>  Like</a>
       </div>
         <button class = 'comment-btn'>Comment</button>
 
