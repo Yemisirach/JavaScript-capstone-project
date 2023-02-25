@@ -29,6 +29,7 @@ const display = (arr) => {
     </div>  
 </section>`,
   );
+
   Display.innerHTML = displayScore.join(' ');
 };
 

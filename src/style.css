@@ -45,6 +45,13 @@ body {
   margin-top: 50px;
 }
 
+.imagemeal {
+  transition: transform 0.5s ease;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .line-feature {
   display: flex;
   justify-content: center;
@@ -100,7 +107,7 @@ ul {
   font-size: 1.5rem;
   justify-content: center;
   text-transform: capitalize;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 ul h1 {
@@ -136,15 +143,54 @@ hr {
 
 /* popup windos */
 .imagemealspop {
-  width: 70%;
+  width: 40%;
   height: auto;
+  margin: 30px;
+}
+
+.popup {
+  background-image: url(../Image/new.jpg);
+  background-repeat: no-repeat;
+  color: bisque;
+}
+
+footer {
+  background-color: black;
+  color: bisque;
+  padding: 30px;
+}
+
+footer a {
+  color: beige;
+  text-decoration: none;
 }
 
 .closeBtn {
   display: flex;
   justify-content: flex-end;
+  flex-direction: row;
   color: brown;
   font-size: 20px;
+  margin-top: 30px;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+}
+
+tr {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 8rem;
+  color: azure;
+  font-family: "Times New Roman", Times, serif;
+  align-items: center;
+}
+
+td {
+  border: 0;
 }
 
 .popup-windo {
@@ -180,6 +226,8 @@ hr {
 }
 
 .list {
+  display: flex;
+  justify-content: center;
   font-size: 25px;
   font-weight: 200;
 }
@@ -228,6 +276,7 @@ textarea {
   width: 50%;
   margin: 1.5rem;
   margin-left: 0;
+  color: azure;
 }
 
 .comments-Btn {
@@ -240,11 +289,6 @@ textarea {
   display: flex;
   justify-content: center;
 }
-
-/* .tableBody {
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-} */
 
 .btn {
   display: flex;
