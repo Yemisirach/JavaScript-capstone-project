@@ -15,6 +15,7 @@ function getMealInfo(e) {
   if (/like-/.test(e.target.id)) {
     const { id } = e.target;
     const foodNum = id.match(/\d+$/)[0];
+
     addLike(foodNum);
   }
 
