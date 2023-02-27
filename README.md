@@ -121,6 +121,11 @@ A web browser
 
 - GitHub: [@githubhandle](https://github.com/damenam)
 
+👤 **Kingno3l**
+
+- GitHub: [@githubhandle](https://github.com/kingno3l)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
